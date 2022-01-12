@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="padding: 10px 20%;">
+    <input type="number" class="input-field" value="0"/>
+    <h1>hello</h1>
+    <script>
+        const input = document.querySelector("input");
+        input.addEventListener("change", function(e) {
+            const n = e.target.value;
+            var p=0;
+            var s=""
+            for(var i=0; i<n; i++) {
+            for(j=0;j<n;j++){
+                if(j==p || j==n-p-1)
+                 s+="<span style='width:100px; height: 20px; background-color:green;border-radius:50%;'>&nbsp</span>";
+                else 
+                 s+="<spanstyle='width:100px; height: 20px;'>&nbsp&nbsp</span>"; 
+            }
+            if(n%2==0) {
+                if(i+1<n/2)
+                 p++;
+                else if(i+1>n/2)
+                 p--; 
+            }
+            else {
+                if(i+1<=n/2)
+                 p++;
+                else 
+                p--; 
+            }
+            s+="<br>";
+            const header = document.querySelector("h1");
+            header.innerHTML = s;
+        }
+       
+        })
+        
+        
+        </script>
+</body>
+</html>

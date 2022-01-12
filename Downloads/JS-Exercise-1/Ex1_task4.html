@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+  <script>
+    let n = +prompt("How many Line you want to print?","5")
+
+while (n % 2 ==0){
+
+n = +prompt("Not a valid number, Please enter odd number","5")
+
+}
+
+let string = "";
+
+
+
+for (let i = 1; i <= n; i++) {
+
+if (i % 2 ==0){
+
+continue
+
+}
+
+for (let j = 0; j <=i-1; j++) {
+
+if (j % 2 ==0 && j !=0){
+
+continue
+
+}
+
+string += "*";
+
+}
+
+string += "\n";
+
+}
+
+for (let k = 1; k <= n-1; k++) {
+
+if (k % 2 ==0){
+
+continue
+
+}
+
+for (let j = 0; j < n - (k+1); j++) {
+
+if (j % 2 ==0 && j !=0){
+
+continue
+
+}
+
+string += "*";
+
+}
+
+string += "\n";
+
+}
+
+alert(string);
+          </script>
+
+</body>
+
+</html>
