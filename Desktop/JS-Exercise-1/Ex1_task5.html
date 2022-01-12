@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <script>
+  
+    let n = +prompt("Input Number for how many rows print?","5")
+    
+    function pattern( n)
+    {
+        let i, j, k;
+ 
+        
+        for (i = 1; i <= n; i++)
+        {
+ 
+            
+            for (k = 1; k < i; k++)
+                document.write("&nbsp");
+ 
+            
+            for (j = i; j <= n; j++)
+                  document.write(j + " ");
+ 
+                  document.write("<br/>");
+        }
+ 
+       
+        for (i = n - 1; i >= 1; i--)
+        {
+         
+           
+            for (k = 1; k < i; k++)
+                  document.write("&nbsp");
+  
+          
+       
+            for (j = i; j <= n; j++)
+                  document.write(j + " ");
+ 
+              document.write("<br/>");
+        }
+    }
+ 
+
+    
+  
+    
+    pattern(n);
+ 
+
+</script>
+  
+
+</body>
+
+</html>
