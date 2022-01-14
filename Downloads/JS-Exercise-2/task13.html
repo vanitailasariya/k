@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Get​ ​ the​ ​ month​ ​name​ ​ from​ ​ a ​ ​ particular​ ​ date</title>
+</head>
+<body>
+<script>
+const num= prompt("Input values for shuffle","1023165454197");
+function separator()
+  {
+    var n_parts = num.toString().split(".");
+    n_parts[0] = n_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return n_parts.join(".");
+  }
+
+
+document.write(separator());
+	</script>
+</body>
+</html>

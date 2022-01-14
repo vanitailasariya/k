@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Get​ ​ the​ ​ month​ ​name​ ​ from​ ​ a ​ ​ particular​ ​ date</title>
+</head>
+<body>
+<script>
+let main_string=prompt("main_string","This is a sample string");
+let ins_string= prompt("ins_string", "Insert me");
+let pos = prompt("position", "3")
+
+insert = function insert() {
+   if(typeof(pos) == "undefined") {
+    pos = 0;
+  }
+   if(typeof(ins_string) == "undefined") {
+    ins_string = ' ';
+  }
+   return main_string.slice(0, pos) +  ins_string  +  main_string.slice(pos);
+    }
+	document.write(insert());
+	</script>
+</body>
+</html>
+

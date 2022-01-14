@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Get union intersection and difference array</title>
+</head>
+<body>
+<script>
+let myInt=prompt("array1", "0123");
+let myInt1=prompt("array2","345");
+let myFunc = num => Number(num);
+var a = Array.from(String(myInt), myFunc);
+let myFunc1 = num => Number(num);
+var b = Array.from(String(myInt1), myFunc1);
+
+function performIntersection()
+ {
+ var union = [...new Set([...a, ...b])];
+
+
+ var difference1 = (a.filter(a => !b.includes(a)));
+ var difference2 = b.filter(b => !a.includes(b));
+ var intersectionResult = a.filter(a => b.indexOf(a) !== -1);
+
+
+	document.write( `union : {[${union}]} , <br>
+	difference1 = [${difference1}], <br>
+	difference2 = [${difference2}], <br>
+	intersectionResult = [${intersectionResult}]`)
+
+}
+
+
+
+performIntersection();
+
+
+
+  
+</script>
+</body>

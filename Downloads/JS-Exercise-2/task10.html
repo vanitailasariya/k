@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Write​ ​ a ​ ​ JavaScript​ ​ function​ ​ to​ ​ get​ ​ time​ ​differences​ ​ in​ ​ years,​ ​ months,​ ​ weeks,​ ​ days,​ ​ hours and​ ​ minutes​ ​ between​ ​ two​ ​ dates.</title>
+</head>
+<body>
+<script>
+
+let a=prompt("enter the date", "1/07/2018");
+let b=prompt("enter the date", "03/05/2020");
+    a = a.split("/");
+	a = new Date(a[2],a[1],a[0]);
+	b = b.split("/");
+	b = new Date(b[2],b[1],b[0]);
+	
+	let diff = new Date(b - a);
+    year = (diff.getUTCFullYear() - 1970);
+	console.log(year);
+	
+	
+    month = (diff.getUTCMonth());
+	console.log(month);
+	
+
+    day = (diff.getUTCDate() - 1);
+	console.log(day);
+
+	
+    function get_diff(){
+    let years = `${year} year,  ${month} months,  ${day} days.`;
+
+    let months = `${(year*12)+month} months  ${day} days`;
+
+    let days = `${diff/(1000 * 60 * 60 * 24)} days`;
+
+    let weeks = `${Math.floor((diff/(1000 * 60 * 60 * 24))/7)} weeks  ${(diff/(1000 * 60 * 60 * 24))%7} days`;
+
+    let hours = `${diff/(1000 * 60 * 60 )} hours`;
+
+    let minutes = `${diff/(1000 * 60)} minutes`;
+	document.write(`years:${years}, <br> months:${months}, <br> days: ${days}, <br> weeks:${weeks}, <br> hours:${hours}, <br> minutes:${minutes}`)
+	}
+	get_diff();
+
+	</script>
+</body>
+</html>

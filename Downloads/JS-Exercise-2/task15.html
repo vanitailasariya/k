@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript​ ​ function​ ​ to​ ​ delete​ ​ particular​ ​object​ ​ from​ ​ array​ ​ and​ ​ add​ ​ new​ ​ object​ ​ at particular​ ​ position.</title>
+</head>
+<body>
+<pre id="test"></pre>
+<pre id="train"></pre>
+<script>
+
+static_array = [{name: "Jack" , age: 23}, {name: "Sam" , age: 12}, {name: "Max" , age: 20}];
+
+if(confirm("want to remove object from array?") == true){
+    let position = prompt('Enter the position number of object you want to remove from array','2');
+    removeObj(position,static_array);
+    alertObj(static_array);
+}
+
+if(confirm("Do you want to Insert any object in array?") == true){
+    let position = prompt('Enter the position where you want to insert object in array','2' );
+    insertObj(position,static_array);
+    alertObj(static_array);
+}
+
+
+function removeObj(position,static_array){
+    if(position>=static_array.length){
+        return(alert('position does not exist enter valid position which is <=3'));
+    }
+    else{
+       let a =static_array.splice(position,1);
+	    document.getElementById('test').innerHTML = JSON.stringify(static_array, null, 5);
+    }
+	
+}
+
+function insertObj(position,static_array){
+    if(position>static_array.length){
+	    
+        return(alert('position is out of range '));
+		
+    }
+    else{
+        let name = prompt('Enter the name of object', "Daniel");
+        let age = +prompt('Enter the age of object', "56");
+        let b = static_array.splice(position,0,{name: name , age: age});
+		document.getElementById('train').innerHTML = JSON.stringify(static_array, null, 5);
+    }
+}
+
+function alertObj(static_array){
+    let object = []
+    static_array.forEach(e => { 
+        object.push(`Name: ${e.name}, Age: ${e.age}`)
+    });
+    return(alert(object.join('\n')));
+	//`union_array : [${union_array}] 
+}
+	</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Write​ ​ a ​ ​ JavaScript​ ​ function​ ​ to​ ​ fill​ ​ an​ ​ array​ ​with​ ​ values​ ​ (either numeric or​ string​ ​ with​ ​ one character)​ ​ on​ ​ supplied​ ​ bounds.</title>
+</head>
+<body>
+<script>
+
+var static_array = window.prompt('array.','"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"').split(',');
+
+var num_steps = window.prompt('number of steps you want to miss','2')
+
+
+
+
+function final_array(static_array,num_steps){
+
+    var arry = []
+
+    for(var p=0;p<static_array.length;p++){
+
+        if(p%num_steps==0){
+
+            arry.push(static_array[p])
+
+        }
+
+    }
+
+    document.write( `your output array : [${arry}]`)
+
+}
+
+
+
+final_array(static_array,num_steps)
+
+
+
+
+
+	
+</script>
+</body>
+</html>

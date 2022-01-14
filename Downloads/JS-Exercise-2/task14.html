@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> JavaScript​ ​ function​ ​ to​ ​ print​​ array​ ​ of​ ​ object​ ​ in​ ​ ascending​ ​ order​ ​ of​ ​ age, & descending​ ​ order​ ​ of​ ​ name..</title>
+</head>
+<body>
+<pre id="test"></pre>
+<pre id="id"></pre>
+<script>
+
+var static_array = [  {id: 1,name:  "Jack" , age : 23}, {id: 2,name:  "Sam" , age : 12}, 
+                  {id: 3,name:  "Max" , age : 20}, {id: 4,name:  "Vanita" , age : 22}, 
+				  {id: 5,name:  "Saloni" , age : 56},  {id: 6,name:  "Rashmi" , age : 27},
+                  {id: 7,name:  "Mittal" , age : 29}, {id: 8,name:  "Darshana" , age : 30}, 
+				  {id: 9,name:  "Bhumi" , age : 35},{id: 10,name:  "Nupur" , age : 44}];
+
+static_array.sort(function(a, b) {
+  return (a.age - b.age);
+}); 
+for(let i=0; i<static_array.length; i++)
+{
+  document.getElementById('test').innerHTML = JSON.stringify(static_array, null, 2);  
+
+}
+
+
+
+static_array?.sort((a, b) => (a.name > b.name ? -1 : 1))
+
+for(let i=0; i<static_array.length; i++)
+{
+ document.getElementById('id').innerHTML = JSON.stringify(static_array, null, 2);   
+   
+}
+
+
+
+	</script>
+</body>
+</html>

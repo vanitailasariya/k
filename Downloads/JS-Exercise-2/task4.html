@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Get shuffle array</title>
+</head>
+<body>
+<script>
+const number= window.prompt("Input values for shuffle","0123456789");
+
+function shuffle(arr) {
+
+arr.sort(() => Math.random() - 0.5);
+
+return arr
+
+}
+
+arr = number.split('');
+
+
+document.write(`[${shuffle(arr)}]`);
+
+
+  
+</script>
+</body>
+</html>
